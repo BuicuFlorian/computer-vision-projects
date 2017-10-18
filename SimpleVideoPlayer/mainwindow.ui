@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>593</width>
-    <height>377</height>
+    <width>691</width>
+    <height>576</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,13 +18,15 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>30</y>
-      <width>121</width>
-      <height>41</height>
+      <y>10</y>
+      <width>91</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">border-radius: 2px;
+background-color: #e67e22;
+color: #ecf0f1;</string>
     </property>
     <property name="text">
      <string>Load video</string>
@@ -33,14 +35,16 @@
    <widget class="QPushButton" name="playVideoBtn">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>170</y>
-      <width>121</width>
-      <height>41</height>
+      <x>500</x>
+      <y>10</y>
+      <width>81</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">border-radius: 2px;
+background-color: #2ecc71;
+color: #ecf0f1;</string>
     </property>
     <property name="text">
      <string>Play</string>
@@ -49,14 +53,16 @@
    <widget class="QPushButton" name="stopVideoBtn">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>230</y>
-      <width>121</width>
-      <height>41</height>
+      <x>600</x>
+      <y>10</y>
+      <width>81</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">border-radius: 2px;
+ background-color: #e74c3c;
+color: #ecf0f1;</string>
     </property>
     <property name="text">
      <string>Stop</string>
@@ -65,10 +71,10 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>20</y>
-      <width>401</width>
-      <height>251</height>
+      <x>10</x>
+      <y>60</y>
+      <width>671</width>
+      <height>461</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -86,7 +92,7 @@ border-radius: 7px;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>593</width>
+     <width>691</width>
      <height>21</height>
     </rect>
    </property>

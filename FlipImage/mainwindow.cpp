@@ -22,9 +22,7 @@ void MainWindow::on_selectImageBtn_clicked()
     QMessageBox msgBox;
     msgBox.setText("Please select an image.");
 
-    QString fileName = QFileDialog::getOpenFileName(this,
-                       tr("Open image"),".",
-                       tr("Image Files (*.jpg, *.jpeg, *.png, *.bmp)"));
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open image"), ".");
 
     if( fileName.isEmpty() ) {
         msgBox.exec();
@@ -40,7 +38,13 @@ void MainWindow::on_selectImageBtn_clicked()
          cvtColor(poza, poza, CV_BGR2RGB);
          QImage img= QImage ((uchar*) poza.data, poza.cols, poza.rows, poza.step, QImage::Format_RGB888);
          ui->label->setPixmap(QPixmap ::fromImage(img));
-         ui->label->resize(ui->label->pixmap()->size());
+
+         if (ui->label->width() < poza.rows && ui->label->height() < poza.cols) {
+            ui->label->setScaledContents( true );
+            ui->label->setSizePolicy( QSizePolicy::Ignored, QSizePolicy::Ignored );
+         } else {
+            ui->label->resize(ui->label->pixmap()->size());
+         }
     }
 }
 

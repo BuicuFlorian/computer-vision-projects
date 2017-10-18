@@ -49,8 +49,7 @@ padding: 10px 16px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: black;
-border-radius: 7px;</string>
+     <string notr="true">border-radius: 7px;</string>
     </property>
     <property name="text">
      <string/>

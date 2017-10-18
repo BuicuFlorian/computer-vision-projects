@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>632</width>
-    <height>381</height>
+    <width>800</width>
+    <height>551</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,11 +17,23 @@
    <widget class="QPushButton" name="selectImageBtn">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>141</width>
+      <x>10</x>
+      <y>10</y>
+      <width>111</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #fff;
+background-color: #d35400;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+border: 1px solid transparent;
+padding: 10px 16px;</string>
     </property>
     <property name="text">
      <string>Select image</string>
@@ -30,11 +42,23 @@
    <widget class="QPushButton" name="flipHorizontallyBtn">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>80</y>
-      <width>141</width>
+      <x>140</x>
+      <y>10</y>
+      <width>131</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #fff;
+background-color: #428bca;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+
+padding: 10px 16px;</string>
     </property>
     <property name="text">
      <string>Flip horizontally</string>
@@ -43,11 +67,22 @@
    <widget class="QPushButton" name="flipVerticallyBtn">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>140</y>
-      <width>141</width>
+      <x>290</x>
+      <y>10</y>
+      <width>131</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #fff;
+background-color: #428bca;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+padding: 10px 16px;</string>
     </property>
     <property name="text">
      <string>Flip vertically</string>
@@ -56,11 +91,22 @@
    <widget class="QPushButton" name="flipHorizontallyVerticallyBtn">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>200</y>
-      <width>141</width>
+      <x>440</x>
+      <y>10</y>
+      <width>181</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #fff;
+background-color: #428bca;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+padding: 10px 16px;</string>
     </property>
     <property name="text">
      <string>Flip horizontally/vertically</string>
@@ -69,11 +115,15 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>20</y>
-      <width>411</width>
-      <height>281</height>
+      <x>10</x>
+      <y>70</y>
+      <width>741</width>
+      <height>391</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: black;
+border-radius: 7px;</string>
     </property>
     <property name="text">
      <string/>
@@ -82,11 +132,23 @@
    <widget class="QPushButton" name="saveImageBtn">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>260</y>
-      <width>141</width>
+      <x>640</x>
+      <y>10</y>
+      <width>111</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #fff;
+background-color: #2ecc71;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+border: 1px solid transparent;
+padding: 10px 16px;</string>
     </property>
     <property name="text">
      <string>Save image</string>
@@ -98,7 +160,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>632</width>
+     <width>800</width>
      <height>21</height>
     </rect>
    </property>

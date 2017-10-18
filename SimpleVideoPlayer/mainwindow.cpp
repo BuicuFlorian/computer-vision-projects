@@ -60,6 +60,7 @@ void MainWindow::on_stopVideoBtn_clicked()
     ui->playVideoBtn->setEnabled(false);
     ui->stopVideoBtn->setEnabled(false);
     cap.release();
+	timer->stop();
 }
 
 void MainWindow::updateFrame()

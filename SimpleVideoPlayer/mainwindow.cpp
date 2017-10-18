@@ -22,10 +22,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_loadVideoBtn_clicked()
 {
-    QString fileName = QFileDialog::getOpenFileName(this,
-                       tr("Open video"), ".");
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open video"), ".");
 
-   cap.open(fileName.toLatin1().data());
+    cap.open(fileName.toLatin1().data());
 
     if (! cap.isOpened() )
     {
@@ -44,7 +43,7 @@ void MainWindow::on_playVideoBtn_clicked()
 
     ui->stopVideoBtn->setEnabled(true);
 
-    if (! cap.read(frame))
+    if (! cap.read(frame) )
     {
         qDebug() << "Can't read the video file.";
     }
@@ -60,7 +59,7 @@ void MainWindow::on_stopVideoBtn_clicked()
     ui->playVideoBtn->setEnabled(false);
     ui->stopVideoBtn->setEnabled(false);
     cap.release();
-	timer->stop();
+    timer->stop();
 }
 
 void MainWindow::updateFrame()
@@ -73,4 +72,3 @@ void MainWindow::updateFrame()
         ui->label->resize(ui->label->pixmap()->size());
     }
 }
-

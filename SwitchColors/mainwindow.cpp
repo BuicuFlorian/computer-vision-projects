@@ -17,7 +17,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_selectImageBtn_clicked()
 {
-    qInfo() << ui->label->width() << ui->label->height();
     QMessageBox msgBox;
     msgBox.setText("Please select an image.");
 
@@ -35,7 +34,11 @@ void MainWindow::on_selectImageBtn_clicked()
         cvtColor(poza, poza, CV_BGR2RGB);
         QImage img = QImage ((uchar*) poza.data, poza.cols, poza.rows, poza.step, QImage::Format_RGB888);
         ui->label->setPixmap(QPixmap ::fromImage(img));
-        ui->label->resize(ui->label->pixmap()->size());
+
+        if (poza.rows > ui->label->width() && poza.cols > ui->label->height()) {
+            ui->label->setScaledContents( true );
+            ui->label->setSizePolicy( QSizePolicy::Ignored, QSizePolicy::Ignored );
+        }
     }
 }
 

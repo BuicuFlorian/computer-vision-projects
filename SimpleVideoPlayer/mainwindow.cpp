@@ -51,7 +51,11 @@ void MainWindow::on_playVideoBtn_clicked()
     cvtColor(frame, frame, CV_BGR2RGB);
     QImage img = QImage ((uchar*) frame.data, frame.cols, frame.rows, frame.step, QImage::Format_RGB888);
     ui->label->setPixmap(QPixmap ::fromImage(img));
-    ui->label->resize(ui->label->pixmap()->size());
+
+    if (frame.rows > ui->label->width() && frame.cols > ui->label->height()) {
+        ui->label->setScaledContents( true );
+        ui->label->setSizePolicy( QSizePolicy::Ignored, QSizePolicy::Ignored );
+    }
 }
 
 void MainWindow::on_stopVideoBtn_clicked()
@@ -69,6 +73,10 @@ void MainWindow::updateFrame()
         cvtColor(frame, frame, CV_BGR2RGB);
         QImage img = QImage ((uchar*) frame.data, frame.cols, frame.rows, frame.step, QImage::Format_RGB888);
         ui->label->setPixmap(QPixmap ::fromImage(img));
-        ui->label->resize(ui->label->pixmap()->size());
+
+        if (frame.rows > ui->label->width() && frame.cols > ui->label->height()) {
+            ui->label->setScaledContents( true );
+            ui->label->setSizePolicy( QSizePolicy::Ignored, QSizePolicy::Ignored );
+        }
     }
 }

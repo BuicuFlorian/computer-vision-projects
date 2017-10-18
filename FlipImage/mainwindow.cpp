@@ -39,34 +39,34 @@ void MainWindow::on_selectImageBtn_clicked()
          QImage img= QImage ((uchar*) poza.data, poza.cols, poza.rows, poza.step, QImage::Format_RGB888);
          ui->label->setPixmap(QPixmap ::fromImage(img));
 
-         if (ui->label->width() < poza.rows && ui->label->height() < poza.cols) {
-            ui->label->setScaledContents( true );
+        if (ui->label->width() < poza.rows && ui->label->height() < poza.cols) {
+			ui->label->setScaledContents( true );
             ui->label->setSizePolicy( QSizePolicy::Ignored, QSizePolicy::Ignored );
-         } else {
+        } else {
             ui->label->resize(ui->label->pixmap()->size());
-         }
+        }
     }
 }
 
 void MainWindow::on_flipHorizontallyBtn_clicked()
 {
     flip(poza, poza, 1);
-           QImage img= QImage ((uchar*) poza.data, poza.cols, poza.rows, poza.step, QImage::Format_RGB888);
-           ui->label->setPixmap(QPixmap ::fromImage(img));
+    QImage img= QImage ((uchar*) poza.data, poza.cols, poza.rows, poza.step, QImage::Format_RGB888);
+    ui->label->setPixmap(QPixmap ::fromImage(img));
 }
 
 void MainWindow::on_flipVerticallyBtn_clicked()
 {
     flip(poza, poza, 0);
-           QImage img= QImage ((uchar*) poza.data, poza.cols, poza.rows, poza.step, QImage::Format_RGB888);
-           ui->label->setPixmap(QPixmap ::fromImage(img));
+    QImage img= QImage ((uchar*) poza.data, poza.cols, poza.rows, poza.step, QImage::Format_RGB888);
+    ui->label->setPixmap(QPixmap ::fromImage(img));
 }
 
 void MainWindow::on_flipHorizontallyVerticallyBtn_clicked()
 {
     flip(poza, poza, -1);
-           QImage img= QImage ((uchar*) poza.data, poza.cols, poza.rows, poza.step, QImage::Format_RGB888);
-           ui->label->setPixmap(QPixmap ::fromImage(img));
+    QImage img= QImage ((uchar*) poza.data, poza.cols, poza.rows, poza.step, QImage::Format_RGB888);
+    ui->label->setPixmap(QPixmap ::fromImage(img));
 }
 
 void MainWindow::on_saveImageBtn_clicked()

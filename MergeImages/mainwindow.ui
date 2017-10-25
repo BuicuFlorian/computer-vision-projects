@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>1024</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1280</width>
+    <height>1024</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="firsImage">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>391</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="secondImage">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>120</y>
+      <width>391</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="nextBtn1">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>10</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">:enabled {
+color: #fff;
+background-color: #428bca;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+border: 1px solid transparent;
+padding: 10px 16px;
+}
+
+:disabled {
+color: #fff;
+background-color: #dddddd;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+border: 1px solid transparent;
+padding: 10px 16px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Next</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="nextBtn2">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>10</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">:enabled {
+color: #fff;
+background-color: #428bca;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+border: 1px solid transparent;
+padding: 10px 16px;
+}
+
+:disabled {
+color: #fff;
+background-color: #dddddd;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+border: 1px solid transparent;
+padding: 10px 16px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Next</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="mergedImages">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>120</y>
+      <width>391</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1310759</width>
+      <height>1310759</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="loadImages1">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #fff;
+background-color: #d35400;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+border: 1px solid transparent;
+padding: 10px 16px;</string>
+    </property>
+    <property name="text">
+     <string>Load images</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="loadImages2">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>10</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #fff;
+background-color: #d35400;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+border: 1px solid transparent;
+padding: 10px 16px;</string>
+    </property>
+    <property name="text">
+     <string>Load images</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="previousBtn1">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>10</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">:enabled {
+color: #fff;
+background-color: #428bca;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+border: 1px solid transparent;
+padding: 10px 16px;
+}
+
+:disabled {
+color: #fff;
+background-color: #dddddd;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+border: 1px solid transparent;
+padding: 10px 16px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Pevious</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider1">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>391</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>341</width>
+      <height>31</height>
+     </size>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="saveBtn">
+    <property name="geometry">
+     <rect>
+      <x>1140</x>
+      <y>10</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">:enabled {
+color: #fff;
+background-color: #2ecc71;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+border: 1px solid transparent;
+padding: 10px 16px;
+}
+:disabled {
+color: #fff;
+background-color: #dddddd;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+border: 1px solid transparent;
+padding: 10px 16px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Save  image</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider2">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>70</y>
+      <width>391</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="previousBtn2">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>10</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">:enabled {
+color: #fff;
+background-color: #428bca;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+border: 1px solid transparent;
+padding: 10px 16px;
+}
+
+:disabled {
+color: #fff;
+background-color: #dddddd;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+border: 1px solid transparent;
+padding: 10px 16px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Pevious</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="processImageBtn">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>10</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">:enabled {
+color: #fff;
+background-color: #d35400;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+border: 1px solid transparent;
+padding: 10px 16px;
+}
+
+:disabled {
+color: #fff;
+background-color: #dddddd;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+border: 1px solid transparent;
+padding: 10px 16px;}</string>
+    </property>
+    <property name="text">
+     <string>Merge images</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="addNoiseBtn">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>650</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">:enabled {
+color: #fff;
+background-color: #428bca;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+border: 1px solid transparent;
+padding: 10px 16px;
+}
+
+:disabled {
+color: #fff;
+background-color: #dddddd;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+border: 1px solid transparent;
+padding: 10px 16px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Add &quot;noise&quot;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="addNoiseBtn2">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>650</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">:enabled {
+color: #fff;
+background-color: #428bca;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+border: 1px solid transparent;
+padding: 10px 16px;
+}
+
+:disabled {
+color: #fff;
+background-color: #dddddd;
+border-color: #357ebd;
+font-size: 14px;
+font-weight: normal;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+border: 1px solid transparent;
+padding: 10px 16px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Add &quot;noise&quot;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;Consolas&quot;;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>100</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;Consolas&quot;;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>horizontalSlider2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_2</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>422</x>
+     <y>118</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>419</x>
+     <y>143</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider1</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>55</x>
+     <y>108</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>46</x>
+     <y>153</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

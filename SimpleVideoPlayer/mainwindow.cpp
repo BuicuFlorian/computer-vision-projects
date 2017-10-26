@@ -42,6 +42,7 @@ void MainWindow::on_playVideoBtn_clicked()
     timer->start(30);
 
     ui->stopVideoBtn->setEnabled(true);
+    ui->playVideoBtn->setEnabled(false);
 
     if (! cap.read(frame) )
     {

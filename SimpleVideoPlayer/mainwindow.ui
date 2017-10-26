@@ -42,9 +42,17 @@ color: #ecf0f1;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-radius: 2px;
+     <string notr="true">:enabled {
+border-radius: 2px;
 background-color: #2ecc71;
-color: #ecf0f1;</string>
+color: #ecf0f1;
+}
+
+:disabled {
+border-radius: 2px;
+background-color: #dddddd;
+color: #ecf0f1;
+}</string>
     </property>
     <property name="text">
      <string>Play</string>
@@ -60,9 +68,17 @@ color: #ecf0f1;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-radius: 2px;
- background-color: #e74c3c;
-color: #ecf0f1;</string>
+     <string notr="true">:enabled {
+border-radius: 2px;
+background-color: #e74c3c;
+color: #ecf0f1;
+}
+
+:disabled {
+border-radius: 2px;
+background-color: #dddddd;
+color: #ecf0f1;
+}</string>
     </property>
     <property name="text">
      <string>Stop</string>

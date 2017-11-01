@@ -1,4 +1,4 @@
-# RGB to BGR converter
+# Merge two images with validation
 
 ## Requirements
 
@@ -15,11 +15,4 @@
 
 ## Graphical user interface
 
-* Initial image
-
-
-![switchcolorschannels n](https://user-images.githubusercontent.com/20202617/32293571-3cd8a74e-bf4c-11e7-87a6-44000c1a6817.png)
-
-* Processed image
-
-![switchcolorschannels p](https://user-images.githubusercontent.com/20202617/32293772-e376a880-bf4c-11e7-9e4d-d79ec73dd6c9.png)
+![mergeimages with validation](https://user-images.githubusercontent.com/20202617/32292327-7625ef88-bf48-11e7-8792-9d80e00508d2.png)

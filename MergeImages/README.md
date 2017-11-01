@@ -1,4 +1,4 @@
-# RGB to BGR converter
+# Merge two images
 
 ## Requirements
 
@@ -9,17 +9,11 @@
 ## Installation
 
 * Download the project.
+* Create `Images1` and `Images2` directories in `D:\` and add 3 images in each one.
 * Open it with `Qt`.
 * In the file with `.pro` extension set `INCLUDEPATH` and `LIBS`.
 * Build the project and then run it.
 
 ## Graphical user interface
 
-* Initial image
-
-
-![switchcolorschannels n](https://user-images.githubusercontent.com/20202617/32293571-3cd8a74e-bf4c-11e7-87a6-44000c1a6817.png)
-
-* Processed image
-
-![switchcolorschannels p](https://user-images.githubusercontent.com/20202617/32293772-e376a880-bf4c-11e7-9e4d-d79ec73dd6c9.png)
+![mergeimages](https://user-images.githubusercontent.com/20202617/32291948-3299571a-bf47-11e7-8bd5-033b31e62c36.png)

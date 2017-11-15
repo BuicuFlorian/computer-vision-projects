@@ -53,25 +53,25 @@ void MainWindow::on_loadImgBtn_clicked()
 
 void MainWindow::on_horizontalSlider_valueChanged(int value)
 {
-    x1 = value;
+    x = value;
     this->drawRect();
 }
 
 void MainWindow::on_verticalSlider_valueChanged(int value)
 {
-    y1 = value;
+    y = value;
     this->drawRect();
 }
 
 void MainWindow::on_horizontalSlider_2_valueChanged(int value)
 {
-    x2 = value;
+    cols = value;
     this->drawRect();
 }
 
 void MainWindow::on_verticalSlider_2_valueChanged(int value)
 {
-    y2 = value;
+    rows = value;
     this->drawRect();
 }
 
@@ -106,9 +106,9 @@ void MainWindow::on_reduceColorsSlider_valueChanged(int position)
 
 void MainWindow::drawRect()
 {
-    point1 = Point(x1, y1);
-    point2 = Point(x1 + x2, y1 + y2);
-    // point2 = Point(x1 + 100, y1 + 100);
+    point1 = Point(x, y);
+    point2 = Point(x + cols, y + rows);
+    // point2 = Point(x + 100, y + 100);
 
     image1.copyTo(imageWithRect);
     rectangle(imageWithRect, point1, point2, CV_RGB(255, 0, 0), 2, 8, 0);

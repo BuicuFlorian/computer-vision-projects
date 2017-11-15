@@ -46,7 +46,7 @@ private:
     Mat reducedROI;
     QMessageBox errorBox;
     Point point1, point2;
-    int x1, x2, y1, y2;
+    int x, y, rows, cols;
 };
 
 #endif // MAINWINDOW_H

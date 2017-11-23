@@ -26,14 +26,13 @@ public:
     ~MainWindow();
 
 public slots:
+    void on_chooseFileBtn_triggered();
+
+    void on_playVideoBtn_triggered();
+
+    void on_stopVideoBtn_triggered();
+
     void updateFrame();
-
-private slots:
-    void on_loadVideoBtn_clicked();
-
-    void on_playVideoBtn_clicked();
-
-    void on_stopVideoBtn_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Video Player");
     ui->playVideoBtn->setEnabled(false);
     ui->stopVideoBtn->setEnabled(false);
     timer = new QTimer(this);
@@ -19,8 +20,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-void MainWindow::on_loadVideoBtn_clicked()
+void MainWindow::on_chooseFileBtn_triggered()
 {
     QString fileName = QFileDialog::getOpenFileName(this, tr("Open video"), ".");
 
@@ -37,7 +37,7 @@ void MainWindow::on_loadVideoBtn_clicked()
     qDebug() << "Frames per second: " << fps ;
 }
 
-void MainWindow::on_playVideoBtn_clicked()
+void MainWindow::on_playVideoBtn_triggered()
 {
     timer->start(30);
 
@@ -59,7 +59,7 @@ void MainWindow::on_playVideoBtn_clicked()
     }
 }
 
-void MainWindow::on_stopVideoBtn_clicked()
+void MainWindow::on_stopVideoBtn_triggered()
 {
     ui->playVideoBtn->setEnabled(false);
     ui->stopVideoBtn->setEnabled(false);

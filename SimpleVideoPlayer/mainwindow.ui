@@ -6,97 +6,25 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>691</width>
-    <height>576</height>
+    <width>865</width>
+    <height>574</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="loadVideoBtn">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-radius: 2px;
-background-color: #e67e22;
-color: #ecf0f1;</string>
-    </property>
-    <property name="text">
-     <string>Load video</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="playVideoBtn">
-    <property name="geometry">
-     <rect>
-      <x>500</x>
-      <y>10</y>
-      <width>81</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">:enabled {
-border-radius: 2px;
-background-color: #2ecc71;
-color: #ecf0f1;
-}
-
-:disabled {
-border-radius: 2px;
-background-color: #dddddd;
-color: #ecf0f1;
-}</string>
-    </property>
-    <property name="text">
-     <string>Play</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="stopVideoBtn">
-    <property name="geometry">
-     <rect>
-      <x>600</x>
-      <y>10</y>
-      <width>81</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">:enabled {
-border-radius: 2px;
-background-color: #e74c3c;
-color: #ecf0f1;
-}
-
-:disabled {
-border-radius: 2px;
-background-color: #dddddd;
-color: #ecf0f1;
-}</string>
-    </property>
-    <property name="text">
-     <string>Stop</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>60</y>
-      <width>671</width>
-      <height>461</height>
+      <y>10</y>
+      <width>821</width>
+      <height>491</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #000;
-border-radius: 7px;
-</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string/>
@@ -108,7 +36,7 @@ border-radius: 7px;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>691</width>
+     <width>865</width>
      <height>21</height>
     </rect>
    </property>
@@ -120,10 +48,54 @@ border-radius: 7px;
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="chooseFileBtn"/>
+   <addaction name="separator"/>
+   <addaction name="playVideoBtn"/>
+   <addaction name="separator"/>
+   <addaction name="stopVideoBtn"/>
+   <addaction name="separator"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="chooseFileBtn">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/folder.png</normaloff>:/images/icons/folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>Choose file</string>
+   </property>
+   <property name="toolTip">
+    <string>Choose file</string>
+   </property>
+  </action>
+  <action name="playVideoBtn">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/play.png</normaloff>:/images/icons/play.png</iconset>
+   </property>
+   <property name="text">
+    <string>Play</string>
+   </property>
+   <property name="toolTip">
+    <string>Play</string>
+   </property>
+  </action>
+  <action name="stopVideoBtn">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/stop.png</normaloff>:/images/icons/stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>Stop</string>
+   </property>
+   <property name="toolTip">
+    <string>Stop</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

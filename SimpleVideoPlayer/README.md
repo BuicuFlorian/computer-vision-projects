@@ -15,4 +15,4 @@
 
 ## Graphical user interface
 
-![simplevideoplayer2](https://user-images.githubusercontent.com/20202617/33162341-d248c322-d031-11e7-863b-b92f60dcceb1.png)
+![simplevideoplayer2](https://user-images.githubusercontent.com/20202617/33185532-00781fea-d08c-11e7-9038-bae2460a7829.png)

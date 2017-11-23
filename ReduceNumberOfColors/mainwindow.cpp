@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Reduce colors");
     ui->saveImageBtn->setEnabled(false);
     ui->horizontalSlider->setEnabled(false);
 }
@@ -16,12 +17,13 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked()
+
+void MainWindow::on_chooseFileBtn_triggered()
 {
     QMessageBox msgBox;
     msgBox.setText("Please select an image.");
 
-    QString fileName = QFileDialog::getOpenFileName(this,tr("Open image"),"D:/jpg");
+    QString fileName = QFileDialog::getOpenFileName(this,tr("Open image"),".");
 
     if( fileName.isEmpty() ) {
         msgBox.exec();
@@ -29,13 +31,13 @@ void MainWindow::on_pushButton_clicked()
         ui->saveImageBtn->setEnabled(true);
         ui->horizontalSlider->setEnabled(true);
 
-        poza = imread(fileName.toLatin1().data());
+        image = imread(fileName.toLatin1().data());
 
-        cvtColor(poza, poza, CV_BGR2RGB);
-        QImage img = QImage ((uchar*) poza.data, poza.cols, poza.rows, poza.step, QImage::Format_RGB888);
+        cvtColor(image, image, CV_BGR2RGB);
+        QImage img = QImage ((uchar*) image.data, image.cols, image.rows, image.step, QImage::Format_RGB888);
         ui->label->setPixmap(QPixmap ::fromImage(img));
 
-        if (ui->label->width() < poza.rows && ui->label->height() < poza.cols) {
+        if (ui->label->width() < image.rows && ui->label->height() < image.cols) {
             ui->label->setScaledContents( true );
             ui->label->setSizePolicy( QSizePolicy::Ignored, QSizePolicy::Ignored );
         } else {
@@ -44,28 +46,27 @@ void MainWindow::on_pushButton_clicked()
     }
 }
 
-
 void MainWindow::on_horizontalSlider_sliderMoved(int position)
 {
-    rez.create(poza.rows, poza.cols, poza.type());
+    result.create(image.rows, image.cols, image.type());
 
-    int nl = poza.rows;
-    int nc = poza.cols * poza.channels();
+    int nl = image.rows;
+    int nc = image.cols * image.channels();
 
     if (position > 0) {
         for(int j = 0; j < nl; j ++) {
-            uchar* data_in = poza.ptr<uchar>(j);
-            uchar* data_out = rez.ptr<uchar>(j);
+            uchar* data_in = image.ptr<uchar>(j);
+            uchar* data_out = result.ptr<uchar>(j);
 
             for(int i = 0; i < nc; i++) {
                   data_out[i] = data_in[i] - data_in[i] % position + position/2;
              }
          }
 
-         QImage img = QImage ((uchar*) rez.data, rez.cols, rez.rows, rez.step, QImage::Format_RGB888);
+         QImage img = QImage ((uchar*) result.data, result.cols, result.rows, result.step, QImage::Format_RGB888);
          ui->label->setPixmap(QPixmap ::fromImage(img));
 
-         if (ui->label->width() < rez.rows && ui->label->height() < rez.cols) {
+         if (ui->label->width() < result.rows && ui->label->height() < result.cols) {
              ui->label->setScaledContents( true );
              ui->label->setSizePolicy( QSizePolicy::Ignored, QSizePolicy::Ignored );
          } else {
@@ -74,7 +75,8 @@ void MainWindow::on_horizontalSlider_sliderMoved(int position)
     }
 }
 
-void MainWindow::on_saveImageBtn_clicked()
+
+void MainWindow::on_saveImageBtn_triggered()
 {
     QMessageBox msgBox;
     msgBox.setText("Your file was not saved.");
@@ -84,7 +86,7 @@ void MainWindow::on_saveImageBtn_clicked()
     if( fileName.isEmpty() ) {
         msgBox.exec();
     } else {
-        cvtColor(rez, rez, CV_BGR2RGB);
-        imwrite(fileName.toLatin1().data(), rez);
+        cvtColor(result, result, CV_BGR2RGB);
+        imwrite(fileName.toLatin1().data(), result);
     }
 }

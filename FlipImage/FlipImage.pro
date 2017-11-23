@@ -70,3 +70,6 @@ LIBS += -L"D:\\OpenCV3\\mybuild\\install\\x64\\vc15\\lib" \
 -lopencv_video330d \
 -lopencv_videoio330d \
 -lopencv_videostab330d
+
+RESOURCES += \
+    resources.qrc

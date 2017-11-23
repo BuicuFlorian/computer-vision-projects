@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>icons/dir.png</file>
+        <file>icons/flip-horizontal.png</file>
+        <file>icons/flip-vertical.png</file>
+        <file>icons/save.png</file>
+        <file>icons/flip-horizontal-vertical.png</file>
+    </qresource>
+</RCC>

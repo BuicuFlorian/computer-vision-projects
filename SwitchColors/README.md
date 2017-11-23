@@ -17,9 +17,8 @@
 
 * Initial image
 
-
-![switchcolorschannels n](https://user-images.githubusercontent.com/20202617/32293571-3cd8a74e-bf4c-11e7-87a6-44000c1a6817.png)
+![switchcolorschannels n2](https://user-images.githubusercontent.com/20202617/33181418-d79d2d80-d078-11e7-838a-7f4781df4f26.png)
 
 * Processed image
 
-![switchcolorschannels p](https://user-images.githubusercontent.com/20202617/32293772-e376a880-bf4c-11e7-9e4d-d79ec73dd6c9.png)
+![switchcolorschannels p2](https://user-images.githubusercontent.com/20202617/33181445-e923eabc-d078-11e7-9971-da849cd2b38d.png)

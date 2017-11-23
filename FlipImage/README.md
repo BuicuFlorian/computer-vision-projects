@@ -17,19 +17,19 @@
 
 * Initial image
 
-![flipimage n](https://user-images.githubusercontent.com/20202617/32291431-b40eb602-bf45-11e7-9988-a12267a31256.png)
+![flipimage n2](https://user-images.githubusercontent.com/20202617/33184919-f8a62f0e-d087-11e7-9326-a819b243673a.png)
 
 
 * Flip horizontally
 
-![flipimage h](https://user-images.githubusercontent.com/20202617/32291397-9e8f6254-bf45-11e7-872f-110a17a88536.png)
+![flipimage h2](https://user-images.githubusercontent.com/20202617/33184935-130beb4a-d088-11e7-90ba-593a72a0e6e2.png)
 
 
 * Flip vertically
 
-![flipimage hv](https://user-images.githubusercontent.com/20202617/32291110-c5a31b7a-bf44-11e7-86bb-7431a24b2450.png)
+![flipimage v2](https://user-images.githubusercontent.com/20202617/33185021-973f50aa-d088-11e7-851d-bf0bf16b25e7.png)
+
 
 * Flip horizontally/vertically
 
-
-![flipimage hv](https://user-images.githubusercontent.com/20202617/32291495-e2472cac-bf45-11e7-93d9-7d4e36e52e22.png)
+![flipimage hv2](https://user-images.githubusercontent.com/20202617/33184991-656250f0-d088-11e7-8a4d-e2e39f042e4c.png)

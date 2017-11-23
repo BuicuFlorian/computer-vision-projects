@@ -1,16 +1,14 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "mylabel.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    this->setWindowTitle("Reduce colors");
-        ui->verticalSlider->setEnabled(false);
-        ui->horizontalSlider->setEnabled(false);
-        ui->verticalSlider_2->setEnabled(false);
-        ui->horizontalSlider_2->setEnabled(false);
+    this->setWindowTitle("Reduce colors from ROI");
+    connect(ui->firstImage, SIGNAL(Mouse_Pressed()), this, SLOT(Mouse_pressed()));
         ui->reduceColorsSlider->setEnabled(false);
         errorBox.setText("Please select an image.");
         errorBox.setStyleSheet("background-color: #ff0039; color: #ffffff; font-size: 21px; "
@@ -22,8 +20,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-void MainWindow::on_loadImgBtn_clicked()
+void MainWindow::on_chooseFileBtn_triggered()
 {
     QString fileName = QFileDialog::getOpenFileName(this, tr("Open image"), ".");
 
@@ -33,46 +30,30 @@ void MainWindow::on_loadImgBtn_clicked()
         image1 = imread(fileName.toLatin1().data());
 
         if ( image1.data )
-            ui->verticalSlider->setEnabled(true);
-            ui->horizontalSlider->setEnabled(true);
-            ui->verticalSlider_2->setEnabled(true);
-            ui->horizontalSlider_2->setEnabled(true);
             ui->reduceColorsSlider->setEnabled(true);
 
             cvtColor(image1, image1, CV_BGR2RGB);
 
             QImage img = QImage ((uchar*) image1.data, image1.cols, image1.rows, image1.step, QImage::Format_RGB888);
             ui->firstImage->setPixmap(QPixmap ::fromImage(img));
-
-            if ( image1.rows > ui->firstImage->width() && image1.cols > ui->firstImage->height() ) {
-                ui->firstImage->setScaledContents( true );
-                ui->firstImage->setSizePolicy( QSizePolicy::Ignored, QSizePolicy::Ignored );
-            }
+            ui->firstImage->resize(ui->firstImage->pixmap()->size());
     }
 }
 
-void MainWindow::on_horizontalSlider_valueChanged(int value)
+void MainWindow::Mouse_pressed()
 {
-    x = value;
-    this->drawRect();
-}
+    if (clicked == true) {
+        x1 = ui->firstImage->x;
+        y1 = ui->firstImage->y;
 
-void MainWindow::on_verticalSlider_valueChanged(int value)
-{
-    y = value;
-    this->drawRect();
-}
+        clicked = false;
+    } else {
+        clicked = true;
+        x2 = ui->firstImage->x;
+        y2 = ui->firstImage->y;
 
-void MainWindow::on_horizontalSlider_2_valueChanged(int value)
-{
-    cols = value;
-    this->drawRect();
-}
-
-void MainWindow::on_verticalSlider_2_valueChanged(int value)
-{
-    rows = value;
-    this->drawRect();
+        this->drawRect();
+    }
 }
 
 void MainWindow::on_reduceColorsSlider_valueChanged(int position)
@@ -96,28 +77,20 @@ void MainWindow::on_reduceColorsSlider_valueChanged(int position)
 
         QImage img = QImage ((uchar*) reducedROI.data, reducedROI.cols, reducedROI.rows, reducedROI.step, QImage::Format_RGB888);
         ui->secondImage->setPixmap(QPixmap ::fromImage(img));
-
-        if ( reducedROI.rows > ui->secondImage->width() && reducedROI.cols > ui->secondImage->height() ) {
-            ui->secondImage->setScaledContents( true );
-            ui->secondImage->setSizePolicy( QSizePolicy::Ignored, QSizePolicy::Ignored );
-        }
+        ui->secondImage->resize(ui->secondImage->pixmap()->size());
     }
 }
 
 void MainWindow::drawRect()
 {
-    point1 = Point(x, y);
-    point2 = Point(x + cols, y + rows);
-    // point2 = Point(x + 100, y + 100);
+    point1 = Point(x1, y1);
+    point2 = Point(x2, y2);
 
     image1.copyTo(imageWithRect);
     rectangle(imageWithRect, point1, point2, CV_RGB(255, 0, 0), 2, 8, 0);
 
     QImage img = QImage ((uchar*) imageWithRect.data, imageWithRect.cols, imageWithRect.rows, imageWithRect.step, QImage::Format_RGB888);
     ui->firstImage->setPixmap(QPixmap ::fromImage(img));
-
-    if ( imageWithRect.rows > ui->secondImage->width() && imageWithRect.cols > ui->secondImage->height() ) {
-        ui->firstImage->setScaledContents( true );
-        ui->firstImage->setSizePolicy( QSizePolicy::Ignored, QSizePolicy::Ignored );
-    }
+    ui->firstImage->resize(ui->firstImage->pixmap()->size());
 }
+

@@ -24,17 +24,11 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_loadImgBtn_clicked();
-
-    void on_horizontalSlider_valueChanged(int value);
-
-    void on_verticalSlider_valueChanged(int value);
-
-    void on_horizontalSlider_2_valueChanged(int value);
-
-    void on_verticalSlider_2_valueChanged(int value);
+    void on_chooseFileBtn_triggered();
 
     void on_reduceColorsSlider_valueChanged(int value);
+
+    void Mouse_pressed();
 
     void drawRect();
 
@@ -46,7 +40,8 @@ private:
     Mat reducedROI;
     QMessageBox errorBox;
     Point point1, point2;
-    int x, y, rows, cols;
+    int x1, y1, x2, y2;
+    bool clicked = true;
 };
 
 #endif // MAINWINDOW_H

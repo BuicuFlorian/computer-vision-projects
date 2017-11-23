@@ -15,4 +15,4 @@
 
 ## Graphical user interface
 
-![reducenumberofcolorsfromroi](https://user-images.githubusercontent.com/20202617/32837658-06a9fe5e-ca17-11e7-8c22-2d76c1948a14.PNG)
+![reducenumberofcolorsfromroi2](https://user-images.githubusercontent.com/20202617/33178896-50e139b0-d070-11e7-9424-50d171dbb954.PNG)

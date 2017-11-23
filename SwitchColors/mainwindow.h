@@ -24,11 +24,12 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_selectImageBtn_clicked();
 
-    void on_switchChannelsBtn_clicked();
+    void on_selectImageBtn_triggered();
 
-    void on_saveImageBtn_clicked();
+    void on_switchChannelsBtn_triggered();
+
+    void on_saveImageBtn_triggered();
 
 private:
     Ui::MainWindow *ui;

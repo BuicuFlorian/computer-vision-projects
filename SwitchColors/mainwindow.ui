@@ -6,103 +6,28 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>676</width>
-    <height>590</height>
+    <width>726</width>
+    <height>557</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="selectImageBtn">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>111</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: #fff;
-background-color: #d35400;
-border-color: #357ebd;
-font-size: 14px;
-font-weight: normal;
-border-radius: 4px;
-text-align: center;
-vertical-align: middle;
-border: 1px solid transparent;
-padding: 10px 16px;</string>
-    </property>
-    <property name="text">
-     <string>Select image</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>80</y>
-      <width>631</width>
-      <height>421</height>
+      <y>10</y>
+      <width>701</width>
+      <height>461</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-radius: 7px;</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="switchChannelsBtn">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>10</y>
-      <width>171</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: #fff;
-background-color: #428bca;
-border-color: #357ebd;
-font-size: 14px;
-font-weight: normal;
-border-radius: 4px;
-text-align: center;
-vertical-align: middle;
-border: 1px solid transparent;
-padding: 10px 16px;</string>
-    </property>
-    <property name="text">
-     <string>Switch colors channels</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="saveImageBtn">
-    <property name="geometry">
-     <rect>
-      <x>530</x>
-      <y>10</y>
-      <width>111</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: #fff;
-background-color: #2ecc71;
-border-color: #357ebd;
-font-size: 14px;
-font-weight: normal;
-border-radius: 4px;
-text-align: center;
-vertical-align: middle;
-border: 1px solid transparent;
-padding: 10px 16px;</string>
-    </property>
-    <property name="text">
-     <string>Save image</string>
     </property>
    </widget>
   </widget>
@@ -111,7 +36,7 @@ padding: 10px 16px;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>676</width>
+     <width>726</width>
      <height>21</height>
     </rect>
    </property>
@@ -123,10 +48,54 @@ padding: 10px 16px;</string>
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="selectImageBtn"/>
+   <addaction name="separator"/>
+   <addaction name="switchChannelsBtn"/>
+   <addaction name="separator"/>
+   <addaction name="saveImageBtn"/>
+   <addaction name="separator"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="selectImageBtn">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/dir.png</normaloff>:/images/icons/dir.png</iconset>
+   </property>
+   <property name="text">
+    <string>Choose file</string>
+   </property>
+   <property name="toolTip">
+    <string>Choose file</string>
+   </property>
+  </action>
+  <action name="switchChannelsBtn">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/colors.png</normaloff>:/images/icons/colors.png</iconset>
+   </property>
+   <property name="text">
+    <string>Switch colors</string>
+   </property>
+   <property name="toolTip">
+    <string>Switch colors</string>
+   </property>
+  </action>
+  <action name="saveImageBtn">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/save.png</normaloff>:/images/icons/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save image</string>
+   </property>
+   <property name="toolTip">
+    <string>Save image</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

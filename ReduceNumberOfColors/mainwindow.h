@@ -24,16 +24,18 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_chooseFileBtn_triggered();
 
     void on_horizontalSlider_sliderMoved(int position);
 
-    void on_saveImageBtn_clicked();
+
+
+    void on_saveImageBtn_triggered();
 
 private:
     Ui::MainWindow *ui;
-    Mat poza;
-    Mat rez;
+    Mat image;
+    Mat result;
 };
 
 #endif // MAINWINDOW_H

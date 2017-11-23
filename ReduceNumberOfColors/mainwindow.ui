@@ -6,51 +6,25 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>744</width>
-    <height>615</height>
+    <width>745</width>
+    <height>594</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>20</y>
-      <width>121</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: #fff;
-background-color: #428bca;
-border-color: #357ebd;
-font-size: 14px;
-font-weight: normal;
-border-radius: 4px;
-text-align: center;
-vertical-align: middle;
-border: 1px solid transparent;
-padding: 10px 16px;</string>
-    </property>
-    <property name="text">
-     <string>Select image</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>120</y>
+      <y>50</y>
       <width>721</width>
-      <height>431</height>
+      <height>461</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: black;
-border-radius: 7px;</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string/>
@@ -60,51 +34,16 @@ border-radius: 7px;</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>70</y>
+      <y>10</y>
       <width>721</width>
       <height>31</height>
      </rect>
     </property>
+    <property name="maximum">
+     <number>200</number>
+    </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>100</y>
-      <width>16</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="saveImageBtn">
-    <property name="geometry">
-     <rect>
-      <x>610</x>
-      <y>20</y>
-      <width>121</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: #fff;
-background-color: #2ecc71;
-border-color: #357ebd;
-font-size: 14px;
-font-weight: normal;
-border-radius: 4px;
-text-align: center;
-vertical-align: middle;
-border: 1px solid transparent;
-padding: 10px 16px;</string>
-    </property>
-    <property name="text">
-     <string>Save image</string>
     </property>
    </widget>
   </widget>
@@ -113,7 +52,7 @@ padding: 10px 16px;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>744</width>
+     <width>745</width>
      <height>21</height>
     </rect>
    </property>
@@ -125,27 +64,40 @@ padding: 10px 16px;</string>
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="chooseFileBtn"/>
+   <addaction name="separator"/>
+   <addaction name="saveImageBtn"/>
+   <addaction name="separator"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="chooseFileBtn">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/dir.png</normaloff>:/images/icons/dir.png</iconset>
+   </property>
+   <property name="text">
+    <string>Choose file</string>
+   </property>
+   <property name="toolTip">
+    <string>Choose file</string>
+   </property>
+  </action>
+  <action name="saveImageBtn">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/save.png</normaloff>:/images/icons/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save image</string>
+   </property>
+   <property name="toolTip">
+    <string>Save image</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
- <connections>
-  <connection>
-   <sender>horizontalSlider</sender>
-   <signal>sliderMoved(int)</signal>
-   <receiver>label_2</receiver>
-   <slot>setNum(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>44</x>
-     <y>127</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>40</x>
-     <y>141</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
 </ui>

@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>icons/colors.png</file>
+        <file>icons/dir.png</file>
+        <file>icons/save.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>743</width>
+    <height>705</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="imageLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>721</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>291</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>The size of the structural element:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="strcutElemDim">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>10</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>743</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="chooseFileBtn"/>
+   <addaction name="separator"/>
+   <addaction name="threshBinaryBtn"/>
+   <addaction name="separator"/>
+   <addaction name="threshBinaryInvBtn"/>
+   <addaction name="separator"/>
+   <addaction name="processImageBtn"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="chooseFileBtn">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/dir.png</normaloff>:/images/icons/dir.png</iconset>
+   </property>
+   <property name="text">
+    <string>Choose file</string>
+   </property>
+   <property name="toolTip">
+    <string>Choose file</string>
+   </property>
+  </action>
+  <action name="threshBinaryBtn">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/binary.png</normaloff>:/images/icons/binary.png</iconset>
+   </property>
+   <property name="text">
+    <string>Thresh Binary</string>
+   </property>
+   <property name="toolTip">
+    <string>Thresh Binary</string>
+   </property>
+  </action>
+  <action name="threshBinaryInvBtn">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/binary-inv.png</normaloff>:/images/icons/binary-inv.png</iconset>
+   </property>
+   <property name="text">
+    <string>Thresh Binary Inv</string>
+   </property>
+   <property name="toolTip">
+    <string>Thresh Binary Inv</string>
+   </property>
+  </action>
+  <action name="processImageBtn">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/process.png</normaloff>:/images/icons/process.png</iconset>
+   </property>
+   <property name="text">
+    <string>Process image</string>
+   </property>
+   <property name="toolTip">
+    <string>Process image</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

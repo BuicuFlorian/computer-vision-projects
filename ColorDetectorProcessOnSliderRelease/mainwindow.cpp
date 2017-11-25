@@ -24,20 +24,20 @@ void MainWindow::on_chooseFileBtn_triggered()
 {
     QString fileName = QFileDialog::getOpenFileName(this, tr("Open image"), ".");
 
-            if ( fileName.isEmpty() ) {
-                errorBox.setText("Please select an image.");
-                errorBox.exec();
-            } else {
-                image = imread(fileName.toLatin1().data());
+        if ( fileName.isEmpty() ) {
+        errorBox.setText("Please select an image.");
+        errorBox.exec();
+    } else {
+        image = imread(fileName.toLatin1().data());
 
-                if ( image.data )
-                    ui->chooseColorBtn->setEnabled(true);
-                    cvtColor(image, image, CV_BGR2RGB);
+        if ( image.data )
+            ui->chooseColorBtn->setEnabled(true);
+            cvtColor(image, image, CV_BGR2RGB);
 
-                    QImage img = QImage ((uchar*) image.data, image.cols, image.rows, image.step, QImage::Format_RGB888);
-                    ui->firstImage->setPixmap(QPixmap ::fromImage(img));
-                    ui->firstImage->resize(ui->firstImage->pixmap()->size());
-            }
+            QImage img = QImage ((uchar*) image.data, image.cols, image.rows, image.step, QImage::Format_RGB888);
+            ui->firstImage->setPixmap(QPixmap ::fromImage(img));
+            ui->firstImage->resize(ui->firstImage->pixmap()->size());
+    }
 }
 
 void MainWindow::on_chooseColorBtn_triggered()
@@ -96,10 +96,10 @@ void MainWindow::on_saveImageBtn_triggered()
 {
     QString fileName = QFileDialog::getSaveFileName(this, "Save file", "");
 
-        if (fileName.isEmpty()) {
-            errorBox.setText("Your file was not saved.");
-            errorBox.exec();
-        } else {
-            imwrite(fileName.toLatin1().data(), result);
-        }
+    if (fileName.isEmpty()) {
+        errorBox.setText("Your file was not saved.");
+        errorBox.exec();
+    } else {
+        imwrite(fileName.toLatin1().data(), result);
+    }
 }

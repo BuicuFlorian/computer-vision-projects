@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/plus.png</file>
+        <file>icons/rhombus.png</file>
+        <file>icons/square.png</file>
+        <file>icons/x.png</file>
+        <file>icons/dir.png</file>
+        <file>icons/dilate.png</file>
+        <file>icons/erode.png</file>
+    </qresource>
+</RCC>

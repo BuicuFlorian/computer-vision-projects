@@ -1,4 +1,4 @@
-# Frame segmentation using Watershed Algorithm
+# Watershed Segmenter
 
 ## Requirements
 
@@ -15,4 +15,10 @@
 
 ## Graphical user interface
 
-![videoplayerwithwatershed](https://user-images.githubusercontent.com/20202617/33234347-1478cd48-d22e-11e7-8265-56a70a86cde3.png)
+* Initial image
+
+![watersgedsegmenter n](https://user-images.githubusercontent.com/20202617/33234055-ba62f1f8-d228-11e7-97eb-8c8edeed8fb1.png)
+
+* Processed image
+
+![watersgedsegmenter p](https://user-images.githubusercontent.com/20202617/33234059-c1bcdacc-d228-11e7-82c7-f10dd3e5a175.png)

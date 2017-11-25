@@ -1,4 +1,4 @@
-# Video player with watershed
+# Frame segmentation using Watershed Algorithm
 
 ## Requirements
 
@@ -15,3 +15,4 @@
 
 ## Graphical user interface
 
+![videoplayerwithwatershed](https://user-images.githubusercontent.com/20202617/33234347-1478cd48-d22e-11e7-8265-56a70a86cde3.png)

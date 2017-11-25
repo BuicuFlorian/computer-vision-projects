@@ -1,5 +1,5 @@
-#ifndef WATERSHEDSEGMENTOR_H
-#define WATERSHEDSEGMENTOR_H
+#ifndef WATERSHEDSEGMENTER_H
+#define WATERSHEDSEGMENTER_H
 
 #include <opencv2/core/core.hpp>
 
@@ -37,4 +37,4 @@ class WatershedSegmenter
         }
 };
 
-#endif // WATERSHEDSEGMENTOR_H
+#endif // WATERSHEDSEGMENTER_H

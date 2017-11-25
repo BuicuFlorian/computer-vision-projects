@@ -29,7 +29,7 @@ SOURCES += \
 
 HEADERS += \
         mainwindow.h \
-    watershedsegmentor.h
+        watershedsegmenter.h
 
 FORMS += \
         mainwindow.ui

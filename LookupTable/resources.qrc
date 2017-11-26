@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>icons/cleaner.png</file>
+        <file>icons/dir.png</file>
+    </qresource>
+</RCC>

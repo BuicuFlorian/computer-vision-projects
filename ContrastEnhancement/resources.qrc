@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>icons/dir.png</file>
+        <file>icons/equalizer.png</file>
+        <file>icons/wrench.png</file>
+    </qresource>
+</RCC>
